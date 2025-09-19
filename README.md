@@ -58,3 +58,7 @@ git add data_given/.gitignore data_given/winequality.csv.dvc
 git add .
 ```
 
+## 12. Commit the message
+```bash
+git commit -m "committing files of dvc"
+```
