@@ -88,9 +88,7 @@ git commit -m "adding data in get_data.py"
 touch src/load_data.py
 ```
 
-## 18.  Add the load_data.py from Github.
-
-## 19. Add the load stage, load the data in the dvc.yaml
+## 18. Add the load stage, load the data in the dvc.yaml
 
 Here we're adding only one stage i.e. **Load stage**.  
 If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
