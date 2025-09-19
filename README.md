@@ -88,7 +88,7 @@ git commit -m "adding data in get_data.py"
 touch src/load_data.py
 ```
 
-## 18. Add the load stage, load the data in the dvc.yaml
+## 18. Add the load stage in the dvc.yaml
 
 Here we're adding only one stage i.e. **Load stage**.  
 If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
@@ -104,4 +104,23 @@ stages:
     - data_given/winequality.csv
     outs:   # output of the load stage is csv file without spaces in fields.
     - data/raw/winequality.csv
+```
+
+## 19. Splitting of Data. Create a file split_data.py
+```bash
+touch src/split_data.py
+```
+
+## 20. Add the split stage in the dvc.yaml
+Here we're adding only one stage i.e. **Split stage**.  
+If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
+```bash
+split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - src/split_data.py
+    - data/raw/winequality.csv
+    outs:
+    - data/processed/train_winequality.csv
+    - data/processed/test_winequality.csv 
 ```
