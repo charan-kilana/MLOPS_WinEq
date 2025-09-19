@@ -134,6 +134,7 @@ touch src/train_and_evaluate.py
 ## 20. Add the split stage in the dvc.yaml
 Here we're adding only one stage i.e. **Train stage**.  
 If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
+
 ```bash
 train_and_evaluate:
     cmd: python src/train_and_evaluate.py --config=params.yaml
@@ -151,4 +152,9 @@ train_and_evaluate:
         cache: false
     outs:
     - saved_models/model.joblib
+```
+
+## 21. Create a folder for reports.
+```bash
+mkdir -p report
 ```
