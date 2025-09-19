@@ -124,3 +124,31 @@ split_data:
     - data/processed/train_winequality.csv
     - data/processed/test_winequality.csv 
 ```
+touch src/train_and_evaluate.py
+
+## 21. Training the Data. Create a file train_and_evaluate.py
+```bash
+touch src/train_and_evaluate.py
+```
+
+## 20. Add the split stage in the dvc.yaml
+Here we're adding only one stage i.e. **Train stage**.  
+If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
+```bash
+train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - data/processed/train_winequality.csv
+    - data/processed/test_winequality.csv 
+    - src/train_and_evaluate.py
+    params:
+    - estimators.ElasticNet.params.alpha
+    - estimators.ElasticNet.params.l1_ratio
+    metrics:
+    - report/scores.json:
+        cache: false
+    - report/params.json:
+        cache: false
+    outs:
+    - saved_models/model.joblib
+```
