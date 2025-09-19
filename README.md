@@ -76,3 +76,34 @@ git commit -m "Adding the parameters in params.yaml"
 ```bash
 touch src/get_data.py
 ```
+
+## 16. Add the get_data.py from GitHub and push it.
+```bash
+git add .
+git commit -m "adding data in get_data.py"
+```
+
+## 17. Loading of Data. Create a file load_data.py
+```bash
+touch src/load_data.py
+```
+
+## 18.  Add the load_data.py from Github.
+
+## 19. Add the load stage, load the data in the dvc.yaml
+
+Here we're adding only one stage i.e. **Load stage**.  
+If we run **`dvc repro`**, it will execute the pipeline starting from this stage. THen a lock will be created and that'll track the file.
+
+
+```bash
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:   # Dependencies for this load stage to run.
+    - src/get_data.py
+    - src/load_data.py
+    - data_given/winequality.csv
+    outs:   # output of the load stage is csv file without spaces in fields.
+    - data/raw/winequality.csv
+```

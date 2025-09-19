@@ -1,1 +1,11 @@
 # Here we're gonna define the stages of the pipeline.
+
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:   # Dependencies for this load stage to run.
+    - src/get_data.py
+    - src/load_data.py
+    - data_given/winequality.csv
+    outs:   # output of the load stage is csv file without spaces in fields.
+    - data/raw/winequality.csv
