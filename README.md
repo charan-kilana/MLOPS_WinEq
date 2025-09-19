@@ -62,3 +62,17 @@ git add .
 ```bash
 git commit -m "committing files of dvc"
 ```
+
+
+## 13. In params.yaml file add the project details.
+
+## 14. Push the file into git
+```bash
+git add .
+git commit -m "Adding the parameters in params.yaml"
+```
+
+## 15. Add a new file in src
+```bash
+touch src/get_data.py
+```
