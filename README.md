@@ -225,6 +225,27 @@ flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statist
 ```
 
 
+## 7. Create a folder for prediction where you need to integrate all prediction related files in that folder so you can call in the application at prediction.
+```bash
+mkdir -p prediction_service/model
+```
+
+## 8. Create a folder for Webapp for the application at prediction.
+```bash
+mkdir webapp        # Static folder for HTML, CSS, JavaScript files.
+mkdir -p webapp/templates
+touch webapp/templates/index.html
+touch webapp/templates/404.html
+touch webapp/templates/base.html
+mkdir -p webapp/static/css
+mkdir -p webapp/static/script
+touch webapp/static/css/main.css
+touch webapp/static/script/index.js
+touch app.py
+touch prediction_service/__init__.py
+touch prediction_service/prediction.py
+```
+
 
 
 
