@@ -7,3 +7,4 @@ scipy>=1.11
 pytest
 tox         # Helps run tests in multiple env.
 jupyterlab  # For jupyter notebook [jupyter-lab notebooks]
+flake8      #For linting we use flake8 to check the code quality acc to STD.

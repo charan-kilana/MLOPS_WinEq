@@ -208,6 +208,23 @@ pip install -e .
 <!-- It specifies metadata like the project’s name, version, dependencies, and entry points. You use setup.py when you want to make your project installable via pip, share it on PyPI, or manage dependencies formally for deployment. -->
 
 
+## 5. Open jupyter-lab notebooks in the cmd
+```bash
+pip install jupyterlab
+jupyter-lab notebooks
+```
+## 6. flake8, we use for linting  to check the code quality acc to STD.
+```bash
+pip install flake8
+
+# Also insert the commands to check few syntax in the code in the tox as my file.
+# stop the build if there are Python syntax errors or undefined names
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+# exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+```
+
+
 
 
 
