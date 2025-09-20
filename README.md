@@ -247,10 +247,13 @@ touch app.py
 touch prediction_service/__init__.py
 touch prediction_service/prediction.py
 ```
-## 9. Insert the flask app.
-```bash
+## 9. Insert the flask app.py code.
 
+## 10. Create a GITHUB flow in GitHub Actions.
+```bash
+mkdir .github/workflows/ci-cd.yaml
 ```
+
 
 
 
