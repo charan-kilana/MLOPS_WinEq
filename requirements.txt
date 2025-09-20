@@ -4,3 +4,5 @@ scikit-learn==1.0.2
 pandas
 numpy==1.21.6
 scipy==1.7.3
+pytest
+tox
