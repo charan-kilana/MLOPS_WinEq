@@ -17,7 +17,7 @@ def index():
     if request.method == "POST":
         try:
             if request.form:
-                data_req=dict(request.form).values()
+                data_req=dict(request.form)
                 response =prediction.form_response(data_req)
                 return render_template("index.html", response=response)
             elif request.json:
@@ -26,8 +26,8 @@ def index():
 
         except Exception as e:
             print(e)
-            # error = {"error": "Something went wrong!! Try again later!"}
-            # error = {"error": e} 
+            error = {"error": "Something went wrong!! Try again later!"}
+            error = {"error": e} 
             return render_template("404.html", error=e)
     else:
         return render_template("index.html")
