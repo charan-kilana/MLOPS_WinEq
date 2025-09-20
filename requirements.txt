@@ -1,10 +1,13 @@
 dvc
 dvc[s3]
-scikit-learn>=1.3.0
+scikit-learn==1.3.0
 pandas
-numpy>=1.26
-scipy>=1.11
+numpy==1.26.4
+scipy==1.11.1
 pytest
 tox         # Helps run tests in multiple env.
 jupyterlab  # For jupyter notebook [jupyter-lab notebooks]
 flake8      #For linting we use flake8 to check the code quality acc to STD.
+flask       #For API routing, request parsing and response 
+gunicorn    #To hanle multiple users on servers.
+joblib
