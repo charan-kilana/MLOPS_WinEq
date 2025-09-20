@@ -251,9 +251,12 @@ touch prediction_service/prediction.py
 
 ## 10. Create a GITHUB flow in GitHub Actions.
 ```bash
-mkdir .github/workflows/ci-cd.yaml
+mkdir -p .github/workflows/
+touch .github/workflows/ci-cd.yaml
 ```
 
+
+### TESTING PHASE
 
 
 
