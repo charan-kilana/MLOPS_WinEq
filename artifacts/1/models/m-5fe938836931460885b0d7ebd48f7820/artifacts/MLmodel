@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/abc/MLOPS_WinEq/artifacts/1/models/m-5fe938836931460885b0d7ebd48f7820/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.18
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.3.0
+mlflow_version: 3.4.0
+model_id: m-5fe938836931460885b0d7ebd48f7820
+model_size_bytes: 878
+model_uuid: m-5fe938836931460885b0d7ebd48f7820
+prompts: null
+run_id: 83372487418943b5b1ea3adcf7c5e3e2
+utc_time_created: '2025-09-20 17:58:30.495981'
