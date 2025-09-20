@@ -173,3 +173,47 @@ dvc metrics show
 # Displays the scores diff with previous trained.
 dvc metrics diff
 ```
+
+### TILL HERE YOU CAN EXPERIMENT AND TRAIN THE CODE.
+
+## Note: Generally in real time before they'll test with multiple algorithms in jupyter notebook, once they feel they had better results then they'll start testing in this format like automating.
+
+### 1. From Here in let's do **TESTING**.
+
+## Run tox.ini
+```bash
+touch tox.ini
+```
+
+## 2. Create a folder tests and inside it create conftest.py, test_config.py and __init__.py
+```bash
+mkdir tests
+touch tests/conftest.py        
+touch tests/test_config.py         # This is where we define all actuall tests.
+touch tests/__init__.py
+```
+
+## 3. Any test in test_config.py always run stating with test_name(), example: test_generic()
+
+-- when you run tox then you'll see a seperate file .tox where you'll have multiple env with lib, logs, scripts. It will create all required files in .tox, but next time i.e rebuilding if you update requirements.txt then you should **tox -r**
+
+## 4. Create a setup.py file
+``` bash
+touch setup.py
+
+# Keep the data in setup.py
+pip install -e .
+```
+
+<!-- It specifies metadata like the project’s name, version, dependencies, and entry points. You use setup.py when you want to make your project installable via pip, share it on PyPI, or manage dependencies formally for deployment. -->
+
+
+
+
+
+
+
+
+
+
+
