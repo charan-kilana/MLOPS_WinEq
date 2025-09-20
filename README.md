@@ -231,6 +231,8 @@ mkdir -p prediction_service/model
 ```
 
 ## 8. Create a folder for Webapp for the application at prediction.
+-- Insert all respective static data onto the webapps.
+
 ```bash
 mkdir webapp        # Static folder for HTML, CSS, JavaScript files.
 mkdir -p webapp/templates
@@ -245,8 +247,10 @@ touch app.py
 touch prediction_service/__init__.py
 touch prediction_service/prediction.py
 ```
+## 9. Insert the flask app.
+```bash
 
-
+```
 
 
 
