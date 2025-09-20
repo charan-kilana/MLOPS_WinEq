@@ -158,3 +158,18 @@ train_and_evaluate:
 ```bash
 mkdir -p report
 ```
+
+## 22. Run the dvc repro so that params.json and scores.json are filled.
+```bash
+touch params.json
+touch scores.json
+```
+
+## 23. Now we need to track the params.json and scores.json.
+```bash
+# Displays the metrics i.e scores and params.
+dvc metrics show
+
+# Displays the scores diff with previous trained.
+dvc metrics diff
+```
