@@ -11,3 +11,4 @@ flake8      #For linting we use flake8 to check the code quality acc to STD.
 flask       #For API routing, request parsing and response 
 gunicorn    #To hanle multiple users on servers.
 joblib
+mlflow == 3.4.0
